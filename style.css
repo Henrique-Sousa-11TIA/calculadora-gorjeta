@@ -96,6 +96,10 @@ strong {
     border-radius: .5rem;
 }
 
+.button-selected{
+    background: var(--topaz);
+}
+
 .tip input {
     width: 100%;
     font-size: 2.4rem;
@@ -160,6 +164,14 @@ strong {
     text-transform: uppercase;
 }
 
+
+input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        display: none;
+    }
+
+
+
 @media(min-width: 920px) {
     header {
         margin-top: 5rem;
@@ -183,15 +195,12 @@ strong {
     }
 
     .info .tip button:hover {
-        background: var(--topaz);
+        background: var(--water-leaf);
         cursor: pointer;
         transition: .3s;
     }
 
-    input::-webkit-inner-spin-button,
-    input::-webkit-outer-spin-button {
-        display: none;
-    }
+    
 
     .results {
         display: flex;
@@ -217,6 +226,4 @@ strong {
 
     
     }
-
-   
 }
