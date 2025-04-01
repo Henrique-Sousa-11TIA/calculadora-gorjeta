@@ -75,90 +75,148 @@ strong {
     opacity: 0.35;
 }
 
-
 .input-box input:focus {
     outline: 2px solid var(--topaz);
 }
 
-.tip {
-    div {
-        margin-top: 1.6rem;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.6rem;
-    }
-
-    button {
-        font-size: 2.4rem;
-        background: var(--sherpa-blue);
-        color: var(--white);
-        font-weight: 700;
-        border: none;
-        padding-block: .6rem;
-        border-radius: .5rem;
-    }
-
-    input {
-        width: 100%;
-        font-size: 2.4rem;
-        text-align: center;
-        border: none;
-        background: var(--squeeze);
-        border-radius: .5rem;
-        padding-block: .6rem;
-        font-weight: 700;
-        color: var(--sherpa-blue);
-    }
-
-    input::placeholder {
-        color: var(--beetle-green);
-    }
-
-    input:focus {
-        outline: 2px solid var(--topaz);
-    }
+.tip div {
+    margin-top: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
 }
 
+.tip button {
+    font-size: 2.4rem;
+    background: var(--sherpa-blue);
+    color: var(--white);
+    font-weight: 700;
+    border: none;
+    padding-block: .6rem;
+    border-radius: .5rem;
+}
 
-.results{
-    background:var(--sherpa-blue);
-    border-radius: 1,5rem;
+.tip input {
+    width: 100%;
+    font-size: 2.4rem;
+    text-align: center;
+    border: none;
+    background: var(--squeeze);
+    border-radius: .5rem;
+    padding-block: .6rem;
+    font-weight: 700;
+    color: var(--sherpa-blue);
+}
+
+.tip input::placeholder {
+    color: var(--beetle-green);
+}
+
+.tip input:focus {
+    outline: 2px solid var(--topaz);
+}
+
+.results {
+    background: var(--sherpa-blue);
+    border-radius: 1.5rem; 
     padding: 2.4rem;
+}
 
-    .amount,
-    .total{
+.results .amount,
+.results .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.results .amount p,
+.results .total p {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.results .amount p span,
+.results .total p span {
+    color: var(--regent-grey);
+    font-size: 1.3rem;
+}
+
+.results .amount strong,
+.results .total strong {
+    color: var(--topaz);
+}
+
+.results button {
+    margin-top: 1.6rem;
+    width: 100%;
+    background: var(--topaz);
+    border: none;
+    border-radius: .5rem;
+    padding-block: .9rem;
+    font-size: 2rem;
+    color: var(--sherpa-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media(min-width: 920px) {
+    header {
+        margin-top: 5rem;
+    }
+
+    main {
         display: flex;
+        max-width: 92rem;
+        margin-inline: auto;
+        padding: 4.8rem;
+        border-radius: 2.5rem;
+        gap: 4.8rem;    
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .info .tip div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info .tip button:hover {
+        background: var(--topaz);
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        display: none;
+    }
+
+    .results {
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
+        padding: 4rem;
 
 
-        p{
-            color: var(--white);
-            font-weight: 700;
+    .amount strong,
+    .total strong {
+        font-size: 4.8rem;
+    }
 
-            span{
-                color: var(--regent-grey);
-                font-size: 1.3rem;
-            }
-        }
+    button:hover{
+        background: var(--water-leaf);
+        transition: .3seg;
+        cursor: pointer;
+    }
 
-        strong{
-            color: var(--topaz);
-        }
+
+      
+    }
+
+    
     }
 
    
-    button{
-        margin-top: 1.6rem;
-        width: 100%;
-        background: var(--topaz);
-        border: none;
-        border-radius: .5rem;
-        padding-block: .9rem;
-        font-size: 2rem;
-        color: var(--sherpa-blue);
-        font-weight: 700;
-        text-transform: uppercase;
-    }
 }
