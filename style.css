@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Space Mono", monospace;
 }
 
-:root{
-    font-size: 62,5%;
+:root {
+    font-size: 62.5%;
     --jagged-ice: #C5E4E7;
     --white: #FFF;
     --sherpa-blue: #00474B;
@@ -17,46 +16,105 @@
     --topaz: #26C2AE;
     --regent-grey: #7F9D9F;
     --squeeze: #F3F9FA;
+    --beetle-green: #547878;
+    --water-leaf: #9FE8DF;
 }
 
-body{
+body {
     font-size: 1.6rem;
-    background: var( --jagged-ice);
+    background: var(--jagged-ice);
 }
 
+header {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+}
 
+main {
+    background: var(--white);
+    padding: 3.2rem 2.4rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+}
 
+.info {
+    padding-inline: 0.8rem;
+}
 
-        header{
-            padding: 5rem;
-            padding-bottom: 4rem;
+.info div {
+    margin-bottom: 3.2rem;
+}
 
-            display: flex;
-            justify-content: center;
+strong {
+    color: var(--greyish-turquoise);
+}
 
-        }
+.input-box {
+    margin-top: .6rem;
+    background: var(--squeeze);
+    display: flex;
+    align-items: center;
+    padding: .6rem 1.8rem;
+    border-radius: .5rem;
+}
 
+.input-box input {
+    border: none;
+    background: transparent;
+    text-align: right;
+    width: 100%;
+    font-size: 2.4rem;
+    outline: none;
+    font-weight: 700;
+    color: var(--sherpa-blue);
+}
 
+.input-box input::placeholder {
+    color: var(--sherpa-blue);
+    opacity: 0.35;
+}
 
-        main{
-            background: var(--white);
-            padding: 3.2rem 2.4rem;
+/* Sem o :has(), vamos adicionar a borda com foco via :focus */
+.input-box input:focus {
+    outline: 2px solid var(--topaz);
+}
 
-            border-radius: 2.5rem 2.5rem 0 0;
-        }
+.tip {
+    div {
+        margin-top: 1.6rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem;
+    }
 
-        .info{
-            padding-inline: 0.8rem;
+    button {
+        font-size: 2.4rem;
+        background: var(--sherpa-blue);
+        color: var(--white);
+        font-weight: 700;
+        border: none;
+        padding-block: .6rem;
+        border-radius: .5rem;
+    }
 
-            strong{
-                color: var(--greyish-turquoise);
-            }
+    input {
+        width: 100%;
+        font-size: 2.4rem;
+        text-align: center;
+        border: none;
+        background: var(--squeeze);
+        border-radius: .5rem;
+        padding-block: .6rem;
+        font-weight: 700;
+        color: var(--sherpa-blue);
+    }
 
-            .input-box{
-                margin-top: .6rem;
-                background: var(--squeeze);
-            }
-        }
+    input::placeholder {
+        color: var(--beetle-green);
+    }
 
-
-
+    input:focus {
+        outline: 2px solid var(--topaz);
+    }
+}
