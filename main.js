@@ -61,3 +61,20 @@ function calculateResults (){
     }
     
 }
+
+
+function reset (){
+    document.querySelector("#bill").value = ""
+    bill = 0
+
+    document.querySelector("#people").value = ""
+    numberOfPeople = 0
+
+    removeClassButtonSelected()
+
+    document.querySelector("#custom-tip").value = ""
+    tipPercentage = 0 
+
+    document.querySelector(".amount strong").innerHTML = "$0.00"
+    document.querySelector(".total strong").innerHTML = "$0.00"
+}
